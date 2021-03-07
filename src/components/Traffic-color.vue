@@ -22,13 +22,14 @@ export default {
       isBlinking: this.blinkingProp
     };
   },
+
   props: {
     activeColor: String,
     lightColor: String,
     activeProp: Boolean,
     blinkingProp: Boolean
   },
-  computed: {},
+
   methods: {
     test() {
       this.isBlinking = !this.isBlinking;

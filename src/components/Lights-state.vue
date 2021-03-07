@@ -1,6 +1,5 @@
 <template>
   <div>
-    <!-- <h1>{{ state }}</h1> -->
     <TrafficColor
       lightColor="hsl(359deg 94% 92%)"
       activeColor="hsl(359deg 94% 62%)"
@@ -24,19 +23,15 @@ import TrafficColor from '@/components/Traffic-color.vue';
 
 export default {
   name: 'LightsState',
+
   props: {
     red: String,
     yellow: String,
     green: String
   },
-  data() {
-    return {
-      state: this.red || this.yellow || this.green
-    };
-  },
+
   components: {
     TrafficColor
-  },
-  mounted() {}
+  }
 };
 </script>

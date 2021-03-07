@@ -3,14 +3,17 @@ import { createRouter, createWebHistory } from 'vue-router';
 const routes = [
   {
     path: '/red',
+    name: 'red',
     component: () => import('@/views/red-light.vue')
   },
   {
     path: '/yellow',
+    name: 'yellow',
     component: () => import('@/views/yellow-light.vue')
   },
   {
     path: '/green',
+    name: 'green',
     component: () => import('@/views/green-light.vue')
   },
   {
