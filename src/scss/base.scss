@@ -1,0 +1,21 @@
+:root {
+    box-sizing  : border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing  : inherit;
+}
+
+body {
+    max-width  : 1080px;
+    margin     : 0 auto;
+
+    font-size                : calc(1rem + 0.3vw);
+    font-family              : Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing   : antialiased;
+    -moz-osx-font-smoothing  : grayscale;
+    text-align               : center;
+    color                    : #2c3e50;
+}

@@ -1,0 +1,31 @@
+.traffic-color {
+    width   : 6em;
+    height  : 4em;
+    margin  : 0.7em auto;
+
+    border-radius  : 0.7em;
+
+    background-color  : var(--bg-light-color);
+
+    transition  : background-color 0.5s ease-out;
+
+    &_active {
+        background-color  : var(--bg-active-color);
+    }
+
+    &_blink {
+        animation  : blink 1s ease-in-out infinite;
+    }
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        background-color  : var(--bg-active-color);
+    }
+
+    50% {
+        background-color  : var(--bg-light-color)
+    }
+}
