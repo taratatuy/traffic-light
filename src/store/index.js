@@ -1,8 +1,8 @@
-import { createStore } from "vuex";
+import { createStore } from 'vuex';
+import timer from './modules/timer.js';
 
 export default createStore({
-  state: {},
-  mutations: {},
-  actions: {},
-  modules: {}
+  modules: {
+    timer
+  }
 });

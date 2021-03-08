@@ -15,6 +15,16 @@
       activeColor="hsl(162deg 43% 46%)"
       :activeProp="!!green"
     />
+    <div
+      class="time-container"
+      :class="{
+        'time-container_red': !!red,
+        'time-container_yellow': !!yellow,
+        'time-container_green': !!green
+      }"
+    >
+      <span>{{ this.timeLeft }}</span>
+    </div>
   </div>
 </template>
 
@@ -25,9 +35,10 @@ export default {
   name: 'LightsState',
 
   props: {
-    red: String,
-    yellow: String,
-    green: String
+    red: Boolean,
+    yellow: Boolean,
+    green: Boolean,
+    timeLeft: Number
   },
 
   components: {
@@ -35,3 +46,5 @@ export default {
   }
 };
 </script>
+
+<style src="../scss/time-container.scss" lang="scss"></style>

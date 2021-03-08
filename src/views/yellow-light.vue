@@ -1,15 +1,15 @@
 <template>
-  <LightsState yellow="YELLOW" />
+  <LightsState :yellow="true" :timeLeft="this.timeout" />
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
 import LightsState from '@/components/Lights-state.vue';
 
 export default {
   data() {
     return {
-      pathToNextState: this.$route.params.pathToNextState || '/green',
-      timeout: 3
+      pathToNextState: this.$route.params.pathToNextState || '/green'
     };
   },
 
@@ -17,30 +17,20 @@ export default {
     LightsState
   },
 
-  methods: {
-    timer() {
-      this.timeoutID = setTimeout(() => {
-        if (this.timeout > 0) {
-          console.log(this.timeout); //TODO: Change to emit.
-          this.timeout--;
-          this.timer();
-        } else {
-          this.next();
-        }
-      }, 1000);
-    },
+  computed: mapGetters(['timeout']),
 
-    next() {
+  mounted() {
+    this.$store.dispatch('startTimer', 3);
+  },
+
+  beforeUpdate() {
+    if (this.timeout == 0) {
       this.$router.push(this.pathToNextState);
     }
   },
 
-  mounted() {
-    this.timer();
-  },
-
   beforeUnmount() {
-    clearTimeout(this.timeoutID);
+    this.$store.dispatch('stopTimer');
   }
 };
 </script>

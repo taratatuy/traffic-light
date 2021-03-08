@@ -1,8 +1,12 @@
 <template>
-  <Navbar />
-  <section class="router-wrapper">
-    <router-view />
-  </section>
+  <header></header>
+  <main>
+    <section class="router-wrapper">
+      <router-view />
+    </section>
+    <Navbar />
+  </main>
+  <footer></footer>
 </template>
 
 <script>
