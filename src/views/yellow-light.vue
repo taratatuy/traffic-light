@@ -1,5 +1,9 @@
 <template>
-  <LightsState :yellow="true" :timeLeft="this.timeout" />
+  <LightsState
+    :yellow="true"
+    :pulsingYellow="pulsing"
+    :timeLeft="this.timeout"
+  />
 </template>
 
 <script>
@@ -12,7 +16,8 @@ export default {
    */
   data() {
     return {
-      pathToNextState: this.$route.params.pathToNextState || '/green'
+      pathToNextState: this.$route.params.pathToNextState || '/green',
+      pulsing: false
     };
   },
 
@@ -29,6 +34,9 @@ export default {
   beforeUpdate() {
     if (this.timeout == 0) {
       this.$router.push(this.pathToNextState);
+    }
+    if (this.timeout <= 3) {
+      this.pulsing = true;
     }
   },
 

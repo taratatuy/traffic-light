@@ -1,5 +1,5 @@
 <template>
-  <LightsState :green="true" :timeLeft="this.timeout" />
+  <LightsState :green="true" :pulsingGreen="pulsing" :timeLeft="this.timeout" />
 </template>
 
 <script>
@@ -10,6 +10,12 @@ export default {
   /*
    * Страница с активным зеленым светом.
    */
+  data() {
+    return {
+      pulsing: false
+    };
+  },
+
   components: {
     LightsState
   },
@@ -26,6 +32,9 @@ export default {
         name: 'yellow',
         params: { pathToNextState: 'red' }
       });
+    }
+    if (this.timeout <= 3) {
+      this.pulsing = true;
     }
   },
 
