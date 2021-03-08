@@ -32,6 +32,9 @@
 import TrafficColor from '@/components/Traffic-color.vue';
 
 export default {
+  /*
+   * Связка трех цветов светофора, где один цвет горит.
+   */
   name: 'LightsState',
 
   props: {

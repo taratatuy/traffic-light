@@ -14,6 +14,13 @@
 
 <script>
 export default {
+  /*
+   * Один цвет светофора.
+   * activeColor - цвет когда горит.
+   * lightColor - цвет когда не горит.
+   * activeProp - горит / не горит.
+   * blinkingProp - мигает / не мигает.
+   */
   name: 'TrafficColor',
   props: {
     activeColor: String,

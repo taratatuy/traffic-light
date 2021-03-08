@@ -7,6 +7,9 @@ import { mapGetters } from 'vuex';
 import LightsState from '@/components/Lights-state.vue';
 
 export default {
+  /*
+   * Страница с активным зеленым светом.
+   */
   components: {
     LightsState
   },

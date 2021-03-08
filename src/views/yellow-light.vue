@@ -7,6 +7,9 @@ import { mapGetters } from 'vuex';
 import LightsState from '@/components/Lights-state.vue';
 
 export default {
+  /*
+   * Страница с активным желтым светом.
+   */
   data() {
     return {
       pathToNextState: this.$route.params.pathToNextState || '/green'

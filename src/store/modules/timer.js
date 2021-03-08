@@ -1,4 +1,8 @@
 export default {
+  /*
+   * Таймер, по которому переключаются страницы.
+   */
+
   state: {
     timeout: 0,
     timeoutID: ''
@@ -13,6 +17,10 @@ export default {
     }
   },
   actions: {
+    /*
+     * Начинаем новый отсчет по секунде.
+     * time - время до конца таймера в секундах.
+     */
     startTimer({ commit, state }, time) {
       commit('setTimer', time);
 

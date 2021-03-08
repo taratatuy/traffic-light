@@ -18,7 +18,7 @@ const routes = [
   },
   {
     path: '/:catchAll(.*)',
-    redirect: '/red'
+    redirect: { name: 'red' }
   }
 ];
 

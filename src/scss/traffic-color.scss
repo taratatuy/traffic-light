@@ -8,14 +8,14 @@
     background-color  : var(--bg-light-color);
 
     transition  : background-color 0.5s ease-out;
+}
 
-    &_active {
-        background-color  : var(--bg-active-color);
-    }
+.traffic-color_active {
+    background-color  : var(--bg-active-color);
+}
 
-    &_blink {
-        animation  : blink 1s ease-in-out infinite;
-    }
+.traffic-color_blink {
+    animation  : blink 1s ease-in-out infinite;
 }
 
 @keyframes blink {
