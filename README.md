@@ -1,5 +1,8 @@
 # traffic-light
 
+Тестовое задание для вакансии. Описание ТЗ можно найти в соответствующем файле.
+Реализованы основная и все дополнительные задачи.
+
 ## Project setup
 ```
 npm install
@@ -7,18 +10,5 @@ npm install
 
 ### Compiles and hot-reloads for development
 ```
-npm run serve
+npm run start
 ```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
