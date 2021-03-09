@@ -28,7 +28,7 @@ export default {
   computed: mapGetters(['timeout']),
 
   mounted() {
-    this.$store.dispatch('startTimer', 3);
+    this.$store.dispatch('startTimer', { time: 3, color: 'yellow' });
   },
 
   beforeUpdate() {
@@ -41,7 +41,7 @@ export default {
   },
 
   beforeUnmount() {
-    this.$store.dispatch('stopTimer');
+    this.$store.dispatch('stopTimer', { color: 'yellow' });
   }
 };
 </script>
