@@ -16,7 +16,6 @@ export default {
    */
   data() {
     return {
-      pathToNextState: this.$route.params.pathToNextState || '/green',
       pulsing: false
     };
   },
@@ -25,7 +24,7 @@ export default {
     LightsState
   },
 
-  computed: mapGetters(['timeout']),
+  computed: mapGetters(['timeout', 'direction']),
 
   mounted() {
     this.$store.dispatch('startTimer', { time: 3, color: 'yellow' });
@@ -33,7 +32,7 @@ export default {
 
   beforeUpdate() {
     if (this.timeout == 0) {
-      this.$router.push(this.pathToNextState);
+      this.$router.push(this.direction);
     }
     if (this.timeout <= 3) {
       this.pulsing = true;

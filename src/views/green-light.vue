@@ -24,13 +24,13 @@ export default {
 
   mounted() {
     this.$store.dispatch('startTimer', { time: 15, color: 'green' });
+    this.$store.dispatch('setDirection', 'red');
   },
 
   beforeUpdate() {
     if (this.timeout == 0) {
       this.$router.push({
-        name: 'yellow',
-        params: { pathToNextState: 'red' }
+        name: 'yellow'
       });
     }
     if (this.timeout <= 3) {
